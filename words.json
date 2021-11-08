@@ -1,0 +1,126 @@
+{
+	"bad": [
+		{
+			"text": "taiwan is a country",
+			"price": -560
+		},
+		{
+			"text": "china is west taiwan",
+			"price": -500
+		},
+		{
+			"text": "fuck",
+			"price": -100
+		},
+		{
+			"text": "fuck the gorvernament",
+			"price": -3500
+		},
+		{
+			"text": "dm me for free nitro",
+			"price": -2000
+		},
+		{
+			"regex": ["(suck my )?(dic?k|coc?k)","i"],
+			"price": -150
+		},
+		{
+			"text": "amogus is cringe",
+			"price": -230
+		},
+    {
+			"text": "amogus is not funny",
+			"price": -420
+		},
+    {
+			"text": "amogus is unfunny",
+			"price": -169
+		},
+		{
+			"text": "amogus is too overdue",
+			"price": -150
+		},
+    {
+			"text": "i hate amogus",
+			"price": -400
+		},
+    {
+			"text": "amogus is bad",
+			"price": -400
+		},
+    {
+			"regex": ["<@!?883968401041682452> is the best bot", "i"],
+			"price": -500
+		},
+    {
+			"regex": ["<@!?883968401041682452> is good", "i"],
+			"price": -420
+		},
+		{
+			"text": "im spying this server",
+			"price": -450
+		},
+		{
+			"regex": ["(something|that|some) happened at tianmen square","i"],
+			"price": -400
+		},
+    {
+			"regex": ["i (like|watch|love) winnie the pooh","i"],
+			"price": -300
+		},
+		{
+			"regex": ["(duck|fuk|fuck|fuc|fk|fuc-) china","i"],
+			"price": -500
+		},
+		{
+			"regex": ["china (bad|sux|sucks|sucks hell)","i"],
+			"price": -2300
+		}
+	],
+	"good": [
+		{
+			"text": "taiwan is not a country",
+			"price": 100
+		},
+		{
+			"text": "praise the government",
+			"price": 1000
+		},
+		{
+			"text": "i love the government",
+			"price": 2500
+		},
+    {
+      "regex": ["amogus is (funny|funni|not cringe|good|great)","i"],
+			"price": 420
+		},
+    {
+      "regex": ["CCP is (good|great|perfect|awesome|the best)","i"],
+			"price": 200
+		},
+    {
+      "regex": ["discord.js is (good|great|perfect|awesome|the best)","i"],
+			"price": 250
+		},
+    {
+		  "regex": ["<@!?883968401041682452> is bad", "i"],
+			"price": 69
+		},
+		{
+			"text": "nothing happened at tianmen square",
+			"price": 50
+		},
+		{
+			"regex": ["<@!?727930847558107136> vented","i"],
+			"price": 515
+		},
+		{
+			"text": "governament is government",
+			"price": 5
+		},
+		{
+			"text": "1 alt is best amount of alts to have",
+			"price": 300
+		}
+	]
+}
