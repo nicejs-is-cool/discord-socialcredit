@@ -61,11 +61,11 @@
 			"price": -450
 		},
 		{
-			"regex": ["(something|that|some) happened at tianmen square","i"],
+			"regex": ["(something?|that|some) happened at tianmen square","gi"],
 			"price": -400
 		},
     {
-			"regex": ["i (like|watch|love) winnie the pooh","i"],
+			"regex": ["i (like|watch|love) winnie t(he|eh) pooh","i"],
 			"price": -300
 		},
 		{
@@ -75,12 +75,32 @@
 		{
 			"regex": ["china (bad|sux|sucks|sucks hell)","i"],
 			"price": -2300
+		},
+    {
+			"regex": ["hexec (good|is good|gud|is the best)","gi"],
+			"price": -600
+		},
+    {
+			"regex": ["udn (sucks|bad|sucks|sux)","gi"],
+			"price": -600
+		},
+		{
+			"regex": ["nigg(er|a)", "gi"],
+			"price": -10000
+		},
+		{
+			"regex": ["Worst meme to exist: (amogus|sus|among us).?", "gi"],
+			"price": -900
 		}
 	],
 	"good": [
 		{
 			"text": "taiwan is not a country",
 			"price": 100
+		},
+    {
+      "regex": ["i have (one|1) kid","i"],
+			"price": 15
 		},
 		{
 			"text": "praise the government",
@@ -91,11 +111,15 @@
 			"price": 2500
 		},
     {
-      "regex": ["amogus is (funny|funni|not cringe|good|great)","i"],
+      "regex": ["amogus (is)? (funny|funni|not cringe|good|great)","i"],
 			"price": 420
 		},
     {
-      "regex": ["CCP is (good|great|perfect|awesome|the best)","i"],
+      "regex": ["china (is)? (good|awesome|great|the best)","i"],
+			"price": 500
+		},
+    {
+      "regex": ["CCP (is)? (good|great|perfect|awesome|the best)","i"],
 			"price": 200
 		},
     {
@@ -121,6 +145,22 @@
 		{
 			"text": "1 alt is best amount of alts to have",
 			"price": 300
+		},
+    {
+      "regex": ["^(sus pc|pc vented)$","i"],
+			"price": 515
+		},
+    {
+			"regex": ["hexec (sucks|sux|is duck|is bad|bad)","gi"],
+			"price": 800
+		},
+    {
+			"regex": ["(fuck|duck) hexec","i"],
+			"price": 800
+		},
+    {
+			"regex": ["udn (good|is good|gud|is the best)","gi"],
+			"price": 800
 		}
 	]
 }

@@ -30,14 +30,14 @@ async function susEvent(msg, isMsgEdit) {
 		if (bword.text) {
 			if (msg.content.toLowerCase().includes(bword.text)) {
 				mSocialCredit(msg.author.id, bword.price);
-				msg.reply(`You have lost ${bword.price} social credit.`)
+				msg.reply(`${bword.price} social credit.`)
 			}
 		}
 		if (bword.regex) {
 			let [regex, flags] = bword.regex;
 			if (new RegExp(regex, flags).test(msg.content)) {
 				mSocialCredit(msg.author.id, bword.price);
-				msg.reply(`You have lost ${bword.price} social credit.`);
+				msg.reply(`${bword.price} social credit.`);
 			}
 		}
 	}
@@ -47,9 +47,9 @@ async function susEvent(msg, isMsgEdit) {
 				if (msg.content.toLowerCase().includes(gword.text)) {
 					
 					mSocialCredit(msg.author.id, gword.price);
-					try { msg.reply(`You have got ${gword.price} social credit!`); } catch(err) { console.error(err); };
+					try { msg.reply(`+${gword.price} social credit!`); } catch(err) { console.error(err); };
 					// ratelimit
-					userDelays[msg.author.id] = Date.now()+(30 * 1000)
+					userDelays[msg.author.id] = Date.now()+(5 * 1000)
 					return;
 				}
 			}
@@ -57,9 +57,9 @@ async function susEvent(msg, isMsgEdit) {
 				let [regex, flags] = gword.regex;
 				if (new RegExp(regex, flags).test(msg.content)) {
 					mSocialCredit(msg.author.id, gword.price);
-					try { msg.reply(`You have got ${gword.price} social credit!`); } catch(err) { console.error(err); };
+					try { msg.reply(`+${gword.price} social credit!`); } catch(err) { console.error(err); };
 					//ratelimit
-          userDelays[msg.author.id] = Date.now()+(30 * 1000)
+          userDelays[msg.author.id] = Date.now()+(5 * 1000)
 					return;
 				}
 			}
@@ -70,6 +70,10 @@ async function susEvent(msg, isMsgEdit) {
 client.on('messageCreate', async (msg) => {
   if (banned.includes(msg.author.id)) return;
   if (msg.author.bot) return;
+	if (msg.content === "(sc)reset") {
+		await db.set(msg.author.id.toString(), 0);
+		msg.reply('social credit reset successful')
+	}
 	await susEvent(msg, false);
 });
 
